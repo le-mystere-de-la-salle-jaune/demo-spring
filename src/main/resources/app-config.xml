@@ -9,7 +9,13 @@
 	<!--new  dev.service.ServiceImpl1() -->
 	<bean id="srv" class="dev.service.ServiceImpl2"></bean>
 	
-	<bean id="opA" class="dev.ihm.OptionIhmA" c:service-ref="srv"></bean>
+	<bean id="scanner" class="java.util.Scanner">
+		<constructor-arg>
+			<util:constant static-field="java.lang.System.in" />
+		</constructor-arg>
+	</bean>
+	
+	<bean id="opA" class="dev.ihm.OptionIhmA" c:service-ref="srv" c:scanner-ref="scanner"></bean>
 	
 	<bean id="opB" class="dev.ihm.OptionIhmB">
 		<constructor-arg ref="srv"></constructor-arg>
