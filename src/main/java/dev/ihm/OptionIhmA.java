@@ -12,5 +12,6 @@ public class OptionIhmA implements OptionIhm {
 
     public void execute() {
         System.out.println("Option A");
+        System.out.println("    Service => " + service.info());
     }
 }
