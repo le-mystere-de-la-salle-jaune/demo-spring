@@ -2,15 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
 	<!--new  dev.service.ServiceImpl1() -->
 	<bean id="srv" class="dev.service.ServiceImpl2"></bean>
 	
-	<bean id="opA" class="dev.ihm.OptionIhmA">
-		<constructor-arg ref="srv"></constructor-arg>
-	</bean>
+	<bean id="opA" class="dev.ihm.OptionIhmA" c:service-ref="srv"></bean>
 	
 	<bean id="opB" class="dev.ihm.OptionIhmB">
 		<constructor-arg ref="srv"></constructor-arg>

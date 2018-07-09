@@ -1,8 +1,10 @@
 package dev.service;
 
-public class ServiceImpl2 implements Service  {
+@org.springframework.stereotype.Service
+public class ServiceImpl2 implements Service {
 
-    public String info() {
-        return "IMPL 2";
-    }
+	@Override
+	public String info() {
+		return "IMPL 2";
+	}
 }
